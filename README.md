@@ -3,7 +3,7 @@
 <div align="center">
   <h3>
     <a href="https://joellhss.github.io/adopet-seminario/">
-        Página demonstrativa do projeto
+        Página demonstrativa do projeto 🧑‍💻️
     </a>
   </h3>
 </div>
@@ -11,7 +11,7 @@
 <div align="center">
   <h3>
     <a href="https://www.figma.com/file/Vj9j12iz8uPIHD7z1dHRfX/Pet-adoption-website-(Community)?node-id=0%3A1&t=S42XsRKm0qFGV8hm-1">
-        Modelo do figma
+        Modelo do figma 🎨️
     </a>
   </h3>
 </div>
