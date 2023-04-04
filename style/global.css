@@ -1,0 +1,18 @@
+:root {
+
+    --gray: #494949;
+    --yellow: #FFBD59;
+
+}
+
+.nav-link, .btn-light, .border-secondary, .dropdown-item {
+    color: var(--gray);
+    border-color: var(--gray);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    border: 3px solid var(--yellow);
+    scale: 0.95;
+    
+}
