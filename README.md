@@ -3,7 +3,7 @@
 <div align="center">
   <h3>
     <a href="https://joellhss.github.io/adopet-seminario/">
-        Página demonstrativa do projeto 🧑‍💻️
+        Página do projeto (Em construção) 🧑‍💻️
     </a>
   </h3>
 </div>
@@ -54,10 +54,9 @@
 	- Raça
 	- Porte
 	- Data de postagem
-
-- Espécie:
+	
+- Espcie:
 	- Nome
-
 		
 **Requisitos:**
 	
@@ -86,7 +85,8 @@ _
 	
 #### 1.3. Definição da tecnologia
 - Java
-- MySql
+- MySql ou Mongo DB ou Algum serviço da Azure
+- Javascript
 - HTML
 - CSS
 - Bootstrap
