@@ -50,10 +50,14 @@
 	- Foto
 	- Castração
 	- Vacinação
-	- Espécie
+	- Espécie ID
 	- Raça
 	- Porte
-	- Data de postagem	
+	- Data de postagem
+
+- Espécie:
+	- Nome
+
 		
 **Requisitos:**
 	
