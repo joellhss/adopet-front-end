@@ -1,6 +1,15 @@
 # Adopet 🐕️🐈‍⬛️
 
 ## Iniciando o projeto
+
+<div align="center">
+  <h3>
+    <a href="https://joellhss.github.io/adopet-seminario/">
+        Página demonstrativa
+    </a>
+  </h3>
+</div>
+
 ### 1. Definição do projeto
 	
 **Nome**: AdoPet
