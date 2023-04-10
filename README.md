@@ -54,6 +54,7 @@
 	- Raça
 	- Porte
 	- Data de postagem
+	- Adotado
 	
 - Espcie:
 	- Nome
