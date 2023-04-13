@@ -49,15 +49,19 @@
 	- Idade
 	- Foto
 	- Castração
-	- Vacinação
-	- Espécie ID
-	- Raça
-	- Porte
+	- Vacinação	
+	- Raça	
 	- Data de postagem
 	- Adotado
+	- Usuário ID
+	- Porte ID
+	- Espécie ID
 	
 - Espcie:
 	- Nome
+
+- Porte
+	- Tipo (Grande, pequeno, médio) 
 		
 **Requisitos:**
 	
