@@ -11,8 +11,8 @@ function verificaImagem(url) {
     });
   }
   
- export async function validarImagem(url) {
+ export async function validadorDeImagens(url) {
     var resultado = await verificaImagem(url);
-    console.log(resultado); // true ou false
+    return resultado;
   }
   

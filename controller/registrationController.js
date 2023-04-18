@@ -1,9 +1,11 @@
 import { userServices } from "../services/userServices.js";
 
-import { validarImagem } from "../js/validadorDeImagens.js";
-import { validarEmail } from "../js/validadorDeEmail.js";
-import { validadorDeTelefone  } from "../js/validadorDeTelefone.js";
-
-console.log(validarImagem("caminho/da/imagem.png"))
-console.log(validarEmail("joel@email.com"))
-console.log(validadorDeTelefone("(87)98853-3943"))
+export async function registrarUsuario(nome, foto, tel, email, senha) {
+    try {
+        await userServices.save(nome, email, senha, tel, foto)
+        window.location.href = "../pages/registrationSucess.html"
+    } catch(err) {
+        console.log(err)
+        window.location.href = "../pages/registrationFail.html"
+    } 
+}
