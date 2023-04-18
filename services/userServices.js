@@ -29,3 +29,7 @@ const save = (nome, email, senha, telefone, urlImage) => {
 export const userServices = {
     save,
 }
+
+const login = () => {
+    
+}

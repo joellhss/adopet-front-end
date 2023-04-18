@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/global.css">
-    <link rel="stylesheet" href="../style/login.css">
-    <title>Adopet - Erro</title>
+    <link rel="stylesheet" href="../style/userPage.css">
+    <title>Adopet - Home</title>
 </head>
 <body class="body-adopet">
 
@@ -47,18 +47,76 @@
                   </li>
                 </ul>
 
+                <div class="d-flex align-items-center profile-header">
+                    
+                    <div class="d-flex flex-column profile-header-text">
+                        <p>Bem-vindo(a),</p>
+                        <h6>Joel Henrique</h6>
+                    </div>
+                    <img class="img-profile-header" src="../img/R.jpeg" alt="">
+                    <a href="" class="profile-header-config text-center">
+                        <img src="../img/gear.svg" alt="Config">
+                    </a>
+                </div>
+
               </div>
             </div>
           </nav>
     </header>
 
     <main class="container d-flex flex-column justify-content-center align-items-center"> <!-- Desenvolver o corpo da aplicação dentro da tag main -->
-      <div class="sucess d-flex align-items-center my-5 w-75">
-        <img src="../img/nervous.png" alt="Sucesso! Happy dog!">
-        <h1 class="h3">Lamentamos informar que não foi possível realizar o cadastro no momento. Por favor, tente novamente mais tarde.</h1>
-      </div>
 
-      <a href="./login.html" type="button" class="btn btn-dark btn-lg w-50 mb-5">Tentar novamente</a>
+        <div class="d-flex flex-column justify-content-center align-items-cente w-75">
+            <div class="grid-animals-header d-flex align-items-center justify-content-between w-100">
+                <h1>Adicione, edite e remova os animais da sua lista.</h1>
+                <a href="#" type="button" class="btn btn-dark">Adicionar</a>
+           </div>
+           
+            <div class="grid-animals-body w-100">
+    
+    
+                <div class="box-animal d-flex flex-column">
+                    <h3>Huskie</h3>
+                    <img src="../img/dog.jpeg" alt="imagem de capa do animal">
+                    <div class="d-flex w-100 mt-2 box-buttons">
+                        <button type="button" class="btn btn-dark btn-sm w-100">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm w-100">Deletar</button>
+                    </div>
+                </div>
+
+                <div class="box-animal d-flex flex-column">
+                    <h3>Huskie</h3>
+                    <img src="../img/dog.jpeg" alt="imagem de capa do animal">
+                    <div class="d-flex w-100 my-2 box-buttons">
+                        <button type="button" class="btn btn-dark btn-sm w-100">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm w-100">Deletar</button>
+                    </div>
+                </div>
+               
+                <div class="box-animal d-flex flex-column">
+                    <h3>Huskie</h3>
+                    <img src="../img/dog.jpeg" alt="imagem de capa do animal">
+                    <div class="d-flex w-100 mt-2 box-buttons">
+                        <button type="button" class="btn btn-dark btn-sm w-100">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm w-100">Deletar</button>
+                    </div>
+                </div>
+               
+                <div class="box-animal d-flex flex-column">
+                    <h3>Huskie</h3>
+                    <img src="../img/dog.jpeg" alt="imagem de capa do animal">
+                    <div class="d-flex w-100 mt-2 box-buttons">
+                        <button type="button" class="btn btn-dark btn-sm w-100">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm w-100">Deletar</button>
+                    </div>
+                </div>
+               
+               
+    
+            </div>
+            
+        </div>
+
     </main>
 
     <footer class="bg-dark m-0 py-5"> <!-- Desenvolver o footer da aplicação dentro da tag footer -->

@@ -5,6 +5,11 @@
 
 }
 
+body {
+    width: 100vw!important;
+    height: 100vh!important;
+}
+
 .nav-link, .btn-light, .border-secondary, .dropdown-item {
     color: var(--gray);
     border-color: var(--gray);

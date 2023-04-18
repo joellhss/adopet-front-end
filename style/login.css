@@ -40,3 +40,22 @@ form h1 {
     font-size: 15px;
     opacity: 80%;
 }
+
+.sucess {
+    height: 200px;
+    gap: 50px;
+}
+
+.sucess img {
+    width: 200px;
+    height: auto;
+}
+
+#btn-sucess-login  {
+    background-color: var(--yellow);
+    color: black;
+}
+
+#btn-sucess-login:hover {
+    background-color: #e2a74d;
+}
