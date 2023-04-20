@@ -21,15 +21,36 @@ const save = (nome, email, senha, telefone, urlImage) => {
         if(resposta.ok) {
             return resposta.body
         }
-        throw new Error("Não foi possível criar o produto.")
+        throw new Error("Não foi possível realizar o cadastro.")
     })
 }
 
+const login = (email, senha) => {
+    let post = {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            email: email,
+            password: senha,
+        }) 
+    }
+
+    return fetch(hostname + "/users", post)
+        .then(resposta => {
+            return resposta.json();
+        })
+        .then(data => {
+            return data;
+        })
+        .catch(error => {
+            console.error(error); // exibe o erro no console
+            console.clear(); // limpa o console
+          });
+}
 
 export const userServices = {
     save,
-}
-
-const login = () => {
-    
+    login,
 }
