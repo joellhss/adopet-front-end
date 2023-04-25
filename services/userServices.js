@@ -1,4 +1,4 @@
-let hostname = "http://localhost:8080";
+const hostname = "http://localhost:8080";
 
 const save = (nome, email, senha, telefone, urlImage) => {
      let post = {

@@ -25,16 +25,31 @@ async function logarNaConta(event) {
             alert.inputValido("inputEmail")
             alert.inputValido("inputPassword")
             
-            // Inserir informações no localStorage
-            //redirecionar para página de usuário
+            loadUserPage(data)
         }
 
 
     } catch(err) {
         console.error("Erro:", err)
-        console.clear();
     }
-    
-
 }
+
+
+function loadUserPage(objetoUser) {
+    const dateAndTime = new Date().toISOString();
+
+    let profileSave = {
+        id: objetoUser.id,
+        nome: objetoUser.name,
+        email: objetoUser.email,
+        phoneNumber: objetoUser.phoneNumber,
+        photo: objetoUser.url,
+        data: dateAndTime
+    }
+
+    localStorage.setItem("user", JSON.stringify(profileSave))
+
+    window.location.href = "../pages/userPage.html"
+}
+
 })()
