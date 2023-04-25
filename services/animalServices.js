@@ -2,7 +2,8 @@ const hostname = "http://localhost:8080";
 
 const getAllById = (id) => {
    return fetch(hostname + "/animals/user/" + id)
-    .then(response => console.log(response.json()))
+    .then(response => response.json())
+    .catch(err => console.error(err))
 }
 
 
