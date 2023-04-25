@@ -68,28 +68,36 @@
           </div>            
           
           <div class="form-group mb-4">
-              <label class="mb-2" for="inputTel">Castrado</label>
-              <input type="text" class="form-control" id="inputAge" aria-describedby="idade" placeholder="Digite a idade do seu pet" required>
+              <label class="mb-2" for="inputCastrado">Castrado</label>
+              <select class="form-select form-control" id="inputCastrado" aria-label="especie" required>
+                <option selected>Selecione uma opção</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+              </select>
           </div>
           
           <div class="form-group mb-4">
-              <label class="mb-2" for="inputTel">Espécie</label>
-              <input type="text" class="form-control" id="inputAge" aria-describedby="idade" placeholder="Digite a idade do seu pet" required>
+              <label class="mb-2" for="inputEspecie">Espécie</label>
+              <select class="form-select form-control" id="inputEspecie" aria-label="especie" required>
+                <option selected>Selecione uma opção</option>
+              </select>
           </div>
           
           <div class="form-group mb-4">
-              <label class="mb-2" for="inputTel">Porte (tamanho)</label>
-              <input type="text" class="form-control" id="inputAge" aria-describedby="idade" placeholder="Digite a idade do seu pet" required>
+              <label class="mb-2" for="selectPorte">Porte (tamanho)</label>
+              <select class="form-select form-control" id="selectPorte" aria-label="porte" required>
+                <option selected>Selecione uma opção</option>
+              </select>
           </div>
 
           <div class="form-group mb-4">
               <label class="mb-2" for="inputImg">Foto de perfil (url)</label>
-              <input type="text" class="form-control" id="inputImg" aria-describedby="imagem" placeholder="www.suaimagem.jpg">
+              <input type="text" class="form-control" id="inputImg" aria-describedby="imagem" placeholder="www.imagem-do-seu-pet.jpg">
           </div>
 
           <div class="form-group mb-4">
-            <label class="mb-2" for="inputTel">Descrição</label>
-            <input type="text" class="form-control" id="inputAge" aria-describedby="idade" placeholder="Digite a idade do seu pet" required>
+            <label class="mb-2" for="inputDescricao">Descrição</label>
+            <textarea class="form-control" id="inputDescricao" rows="5" ></textarea>
           </div>
 
 
@@ -98,7 +106,7 @@
         </form>
     </main>
 
-    <footer class="bg-dark m-0 py-5"> <!-- Desenvolver o footer da aplicação dentro da tag footer -->
+    <footer class="bg-dark m-0 py-5">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <img class="logo-footer" src="../img/logo-footer.svg" alt="Logo do adopeter">
@@ -132,7 +140,7 @@
     </footer>
 
 
-    <script src="../js/validaForm.js" type="module"></script>
+    <script src="../controller/registrationAnimalController.js" type="module"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>    

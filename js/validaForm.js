@@ -104,8 +104,7 @@ async function validaInput(event) {
             } else {
                 alert.inputInvalido(inputId, "A senha informada neste campo, deve ser a mesma do campo anterior.")
                 validacoes.senha.validaConfirmaSenha = false;
-            }
-            
+            }       
     }
 }
 
