@@ -2,7 +2,7 @@ import { animalServices } from "../services/animalServices.js"
 
 const form = document.querySelector("form");
 
-(async function() {
+async function loadFormRegistration() {
     const size = await animalServices.getSize();
     const species = await animalServices.getSpecies();
 
@@ -22,12 +22,31 @@ const form = document.querySelector("form");
         option.innerText = porte.name;
         selectSizes.appendChild(option)
     });
+};
 
-    form.addEventListener("submit", cadastrarAnimal)
-}())
+const url = window.location.href;
+const ultimaBarra = url.lastIndexOf("/");
+const palavra = url.substring(ultimaBarra + 1);
 
 
-function cadastrarAnimal(event) {
-    event.preventDefault();
-    console.log(event)
+if(palavra == "atualizationAnimal.html") {
+    loadFormRegistration()
 }
+
+export async function cadastrarAnimal(idUser, nome, idade, castrado, especie, porte, foto, descricao, raca) {
+    try {
+        await animalServices.createAnimal(idUser, nome, idade, castrado, especie, porte, foto, descricao, raca)
+        window.location.href = "../pages/registrationAnimalSucess.html"
+    } catch(err) {
+        console.log(err)
+        window.location.href = "../pages/registrationAnimalFail.html"
+    } 
+}
+
+
+$(document).ready(function() {
+    var delay = 100; // tempo de atraso em milissegundos
+    $('form .form-group').each(function(index) {
+      $(this).delay(delay * index).animate({opacity: 1}, 500);
+    });
+  });

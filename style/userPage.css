@@ -35,18 +35,18 @@ body {
     color: black;
 }
 
-.profile-header-config img {
-    background-color: var(--yellow);
+.profile-header-config img{
     border-radius: 5px;    
 }
 
 .profile-header-config:hover img{
-    background-color: #e2a74d;
+    background-color: var(--yellow);
 }
 
 .profile-header-config:active img{
     scale: .95;
 }
+
 
 .grid-animals-header {
     margin-top: 90px;
@@ -90,3 +90,11 @@ body {
     gap: 5px;
 }
 
+#loading-message {
+    width: 100%;
+    margin: 100px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #e0e0e0;
+}

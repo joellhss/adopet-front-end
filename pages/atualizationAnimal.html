@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/global.css">
     <link rel="stylesheet" href="../style/login.css">
-    <title>Adopet - Erro</title>
+    <title>Adopet - Home</title>
 </head>
 <body class="body-adopet">
 
@@ -47,21 +47,74 @@
                   </li>
                 </ul>
 
+
               </div>
             </div>
           </nav>
     </header>
 
     <main class="container d-flex flex-column justify-content-center align-items-center"> <!-- Desenvolver o corpo da aplicação dentro da tag main -->
-      <div class="sucess d-flex align-items-center my-5 w-75">
-        <img src="../img/nervous.png" alt="Sucesso! Happy dog!">
-        <h1 class="h3">Lamentamos informar que não foi possível realizar o cadastro no momento. Por favor, tente novamente mais tarde.</h1>
-      </div>
+      
+      <form class="w-50">
+            <h1 class="text-center mb-5">Atualize as informações do pet</h1>
 
-      <a href="./login.html" type="button" class="btn btn-dark btn-lg w-50 mb-5">Tentar novamente</a>
+            <div id="loading-message">Carregando...</div>
+
+            <div class="form-group-att mb-4">
+                <label class="mb-2" for="inputNome">Nome</label>
+                <input type="text" class="form-control" id="inputNome" aria-describedby="nome" placeholder="Digite o nome do seu pet" required>
+            </div>  
+
+            <div class="form-group-att mb-4">
+              <label class="mb-2" for="inputAge">Idade</label>
+              <input type="text" class="form-control" id="inputAge" aria-describedby="idade" placeholder="Digite a idade do seu pet" required>
+          </div>            
+          
+          <div class="form-group-att mb-4">
+              <label class="mb-2" for="inputCastrado">Castrado</label>
+              <select class="form-select form-control" id="inputCastrado" aria-label="especie" required>
+                <option selected>Selecione uma opção</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+              </select>
+          </div>
+          
+          <div class="form-group-att mb-4">
+              <label class="mb-2" for="inputEspecie">Espécie</label>
+              <select class="form-select form-control" id="inputEspecie" aria-label="especie" required>
+                <option selected>Selecione uma opção</option>
+              </select>
+          </div>          
+          
+          <div class="form-group-att mb-4">
+              <label class="mb-2" for="inputRaca">Raça</label>
+              <input type="text" class="form-control" id="inputRaca" aria-describedby="raca" placeholder="Digite a raça do seu pet" required>
+          </div>
+          
+          <div class="form-group-att mb-4">
+              <label class="mb-2" for="selectPorte">Porte (tamanho)</label>
+              <select class="form-select form-control" id="selectPorte" aria-label="porte" required>
+                <option selected>Selecione uma opção</option>
+              </select>
+          </div>
+
+          <div class="form-group-att mb-4">
+              <label class="mb-2" for="inputImg">Foto de perfil (url)</label>
+              <input type="text" class="form-control" id="inputImg" aria-describedby="imagem" placeholder="www.imagem-do-seu-pet.jpg">
+          </div>
+
+          <div class="form-group-att mb-4">
+            <label class="mb-2" for="inputDescricao">Descrição</label>
+            <textarea class="form-control" id="inputDescricao" rows="5" ></textarea>
+          </div>
+
+
+            
+            <button type="submit" class="btn btn-dark w-100">Salvar</button>
+        </form>
     </main>
 
-    <footer class="bg-dark m-0 py-5"> <!-- Desenvolver o footer da aplicação dentro da tag footer -->
+    <footer class="bg-dark m-0 py-5">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <img class="logo-footer" src="../img/logo-footer.svg" alt="Logo do adopeter">
@@ -94,6 +147,9 @@
       </div>
     </footer>
 
+    <script src="../js/jquery.min.js"></script>
+    <script src="../controller/editAnimalController.js" type="module"></script>
+    <script src="../js/validaAnimalForm.js" type="module"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>    

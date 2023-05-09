@@ -33,7 +33,7 @@ const login = (email, senha) => {
         },
         body: JSON.stringify({
             email: email,
-            password: senha,
+            password: senha
         }) 
     }
 
@@ -42,6 +42,7 @@ const login = (email, senha) => {
             return resposta.json();
         })
         .then(data => {
+            console.log(data)
             return data;
         })
         .catch(error => {

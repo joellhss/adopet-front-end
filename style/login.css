@@ -59,3 +59,20 @@ form h1 {
 #btn-sucess-login:hover {
     background-color: #e2a74d;
 }
+
+#loading-message {
+    width: 100%;
+    margin: 100px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.form-group, .form-group-att {
+    opacity: 0;
+}
+
+.hidden {
+    opacity: 0;
+}

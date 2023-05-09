@@ -51,10 +51,14 @@ if(hasExpired()) {
 
 
 function loadAnimal(array) {
-    const gridBox = $('#grid-animals-body')
+    const gridBox = document.getElementById("grid-animals-body")
 
-    array.forEach((animal, index) => {
-        const box = $('<div>', {class: 'box-animal d-flex flex-column'});
+    array.forEach(animal => {
+        const box = document.createElement("div")
+        box.classList.add("box-animal")
+        box.classList.add("d-flex")
+        box.classList.add("flex-column")
+        box.classList.add("box-hidden")
 
         let contentBox = `        
                     <h3>${animal.name}</h3>
@@ -87,14 +91,13 @@ function loadAnimal(array) {
                         </div>
                     </div>
                     `
-        box.append(contentBox)
-        gridBox.append(box.css('opacity', 0));
-
-        box.delay(index * 200).animate({opacity: 1}, 500);
+        box.innerHTML = contentBox;
+        
+        gridBox.appendChild(box)
 
     });
 
-    gridBox.on("click", e => {
+    gridBox.addEventListener("click", e => {
         if(e.target.dataset.btn === "edit") {
             editAnimal(e.target.id)
         } else if (e.target.dataset.btn === "delete") {
@@ -103,7 +106,21 @@ function loadAnimal(array) {
     })
 
 
+    const cards = document.querySelectorAll('.box-hidden');
+    let currentIndex = 0;
 
+    function showCard() {
+    if (currentIndex < cards.length) {
+        cards[currentIndex].classList.remove('box-hidden');
+        currentIndex++;
+
+        if (currentIndex < cards.length) {
+        setTimeout(showCard, 200);
+        }
+    }
+    }
+
+    showCard();
 }
 
 const sair = document.getElementById("sair")

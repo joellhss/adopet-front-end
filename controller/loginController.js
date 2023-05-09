@@ -10,8 +10,9 @@ form.addEventListener("submit", logarNaConta)
 async function logarNaConta(event) {
     event.preventDefault();
     
-    const email = event.srcElement[0].value;
-    const senha = event.srcElement[1].value;
+    const email = document.getElementById("inputEmail").value;
+    const senha = document.getElementById("inputPassword").value;
+    console.log(senha)
 
     try {
         const data = await userServices.login(email, senha)

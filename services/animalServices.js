@@ -18,8 +18,75 @@ const getSpecies = () => {
     .catch(err => console.error(err))
 }
 
+const createAnimal = (idUser, nome, idade, castrado, especie, porte, foto, descricao, raca) => {
+    let post = {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: nome,
+            description: descricao,
+            age: idade,
+            url_image: foto,
+            breed: raca,
+            castrated: castrado,
+            idUser: idUser,
+            idSpecies: especie,
+            idSize: porte
+        }) 
+    }
+
+    return fetch(hostname + "/animals", post)
+    .then(resposta => {
+        console.log(resposta)
+        if(resposta.ok) {
+            return resposta.body
+        }
+        throw new Error("Não foi possível realizar o cadastro.")
+    })
+}
+
+const getAnimalById = (id) => {
+    return fetch(hostname + "/animals/" + id)
+     .then(response => response.json())
+     .catch(err => console.error(err))
+ }
+
+const updateAnimal = (idAnimal, idUser, nome, idade, castrado, especie, porte, foto, descricao, raca) => {
+let put = {
+    method: "PUT",
+    headers: {
+        'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+        animalId: idAnimal,
+        name: nome,
+        description: descricao,
+        age: idade,
+        url_image: foto,
+        breed: raca,
+        castrated: castrado,
+        idSpecies: especie,
+        idSize: porte,
+        idUser: idUser
+        }) 
+    }
+
+    return fetch(hostname + "/animals", put)
+    .then(resposta => {
+        console.log(resposta)
+        if(resposta.ok) {
+            return resposta.body
+        }
+        throw new Error("Não foi possível realizar a atualização.")
+    })
+}
 export const animalServices = {
     getAllById,
     getSize,
-    getSpecies
+    getSpecies,
+    createAnimal,
+    getAnimalById,
+    updateAnimal
 }

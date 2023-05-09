@@ -54,8 +54,11 @@
                         <h6 id="user-name"></h6>
                     </div>
                     <img class="img-profile-header" id="img-profile-header" src="" alt="">
-                    <a href="" class="profile-header-config text-center">
+                    <!-- <a href="" class="profile-header-config text-center" title="Editar cadastro">
                         <img src="../img/gear.svg" alt="Config">
+                    </a> -->
+                    <a href="#" id="sair" class="profile-header-config text-center" title="Sair">
+                        <img src="../img/sign-out.svg" alt="Config">
                     </a>
                 </div>
 
@@ -71,6 +74,8 @@
                 <h1>Adicione, edite e remova os animais da sua lista.</h1>
                 <a href="./registrationAnimal.html" type="button" class="btn btn-dark">Adicionar</a>
            </div>
+
+           <div id="loading-message" style="display:none">Carregando...</div>
            
             <div class="grid-animals-body w-100" id="grid-animals-body">
 
@@ -113,7 +118,10 @@
       </div>
     </footer>
 
+    <script src="../js/jquery.min.js"></script>
     <script src="../controller/userPageController.js" type="module"></script>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>    
 </body>

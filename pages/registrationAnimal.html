@@ -81,6 +81,11 @@
               <select class="form-select form-control" id="inputEspecie" aria-label="especie" required>
                 <option selected>Selecione uma opção</option>
               </select>
+          </div>          
+          
+          <div class="form-group mb-4">
+              <label class="mb-2" for="inputRaca">Raça</label>
+              <input type="text" class="form-control" id="inputRaca" aria-describedby="raca" placeholder="Digite a raça do seu pet" required>
           </div>
           
           <div class="form-group mb-4">
@@ -139,7 +144,8 @@
       </div>
     </footer>
 
-
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/validaAnimalForm.js" type="module"></script>
     <script src="../controller/registrationAnimalController.js" type="module"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
