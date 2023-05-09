@@ -123,3 +123,11 @@ form.addEventListener("submit", event => {
 
 })
 
+
+$(document).ready(function() {
+    var delay = 300; // tempo de atraso em milissegundos
+    $('form .form-group').each(function(index) {
+      $(this).delay(delay * index).animate({opacity: 1}, 1000);
+    });
+  });
+
