@@ -3,23 +3,11 @@ import { validadorDeImagens } from "./components/validadorDeImagens.js";
 import { cadastrarAnimal } from "../controller/registrationAnimalController.js";
 import { atualizarAnimal } from "../controller/editAnimalController.js";
 
-const inputs = document.querySelectorAll("input")
-const selects = document.querySelectorAll("select")
-const textAreas = document.querySelectorAll("textarea")
-
+const inputs = document.querySelectorAll("input, select, textarea");
 
 inputs.forEach(input => {
     input.addEventListener("blur", validaInput)
 });
-
-selects.forEach(select => {
-    select.addEventListener("blur", validaInput)
-});
-
-textAreas.forEach(textArea => {
-    textArea.addEventListener("blur", validaInput)
-});
-
 
 export async function validaInput(event) {
     const content = event.target.value;

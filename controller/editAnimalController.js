@@ -9,8 +9,7 @@ export function editAnimal(id) {
 async function loadInfoAnimal() {
     const idAnimal = localStorage.getItem("idAnimal-edit")
     const dados = await animalServices.getAnimalById(idAnimal);
-    const size = await animalServices.getSize();
-    const specie = await animalServices.getSpecies();
+    await carregaDados();
 
     document.getElementById("inputNome").value = dados.name
     document.getElementById("inputAge").value = dados.age
@@ -21,15 +20,7 @@ async function loadInfoAnimal() {
     document.getElementById("inputImg").value = dados.url_image
     document.getElementById("inputDescricao").value = dados.description
 
-    // document.getElementById("loading-message").style.display = "none"
-    $("#loading-message").fadeOut(500, function(){
-        var delay = 200; // tempo de atraso em milissegundos
-        $('form .form-group-att').each(function(index) {
-        $(this).delay(delay * index).animate({opacity: 1}, 500);
-        });
-    });
     const form = document.querySelector("form");
-    // form.style.display = "block";
 
     const formElements = form.elements
     
@@ -43,7 +34,13 @@ async function loadInfoAnimal() {
 
         validaInput(event)
     }
-   
+
+    $("#loading-message").fadeOut(300, function(){
+        var delay = 200; // tempo de atraso em milissegundos
+        $('form .form-group-att').each(function(index) {
+        $(this).delay(delay * index).animate({opacity: 1}, 500);
+        });
+    });
 };
 
 const url = window.location.href;
@@ -65,4 +62,26 @@ export async function atualizarAnimal(idAnimal, idUser, nome, idade, castrado, e
         localStorage.removeItem("idAnimal-edit")
         window.location.href = "../pages/registrationAnimalFail.html"
     } 
+}
+
+async function carregaDados() {
+    const size = await animalServices.getSize();
+    const species = await animalServices.getSpecies();
+
+    const selectSpecies =document.getElementById("inputEspecie");
+    const selectSizes =document.getElementById("selectPorte");
+
+    species.forEach(specie => {
+        const option = document.createElement("option");
+        option.value = specie.id;
+        option.innerText = specie.name;
+        selectSpecies.appendChild(option)
+    });
+
+    size.forEach(porte => {
+        const option = document.createElement("option");
+        option.value = porte.id;
+        option.innerText = porte.name;
+        selectSizes.appendChild(option)
+    });
 }
