@@ -1,4 +1,4 @@
-const hostname = "http://localhost:8080";
+const hostname = "http://adopet-api2-env.eba-wnagn2dz.sa-east-1.elasticbeanstalk.com";
 
 const getAllById = (id) => {
    return fetch(hostname + "/animals/user/" + id)
@@ -75,18 +75,35 @@ let put = {
 
     return fetch(hostname + "/animals", put)
     .then(resposta => {
-        console.log(resposta)
         if(resposta.ok) {
             return resposta.body
         }
         throw new Error("Não foi possível realizar a atualização.")
     })
 }
+
+const deleteById = (id) => {
+    let deleteMethod = {
+            method: "DELETE",
+    }
+    
+    return fetch(hostname + "/animals/" + id, deleteMethod)
+    .then(resposta => {
+        if(resposta.ok) {
+            return resposta.ok
+        }
+        throw new Error("Não foi possível realizar a exclusão.")
+    })
+}
+
+
+
 export const animalServices = {
     getAllById,
     getSize,
     getSpecies,
     createAnimal,
     getAnimalById,
-    updateAnimal
+    updateAnimal,
+    deleteById
 }

@@ -54,7 +54,7 @@ function loadAnimal(array) {
     const gridBox = $('#grid-animals-body')
 
     array.forEach((animal, index) => {
-        const box = $('<div>', {class: 'box-animal d-flex flex-column'});
+        const box = $('<div>', {class: 'box-animal d-flex flex-column', id: animal.animalId});
 
         let contentBox = `        
                     <h3>${animal.name}</h3>
@@ -79,7 +79,7 @@ function loadAnimal(array) {
                                 Tem certeza que deseja excluir o(a) ${animal.name}?
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                <button id="close-modal-${animal.animalId}"type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
                                 <button type="button" id="${animal.animalId}" class="btn btn-danger" data-btn="delete">Sim</button>
                             </div>
                             </div>

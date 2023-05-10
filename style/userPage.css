@@ -98,3 +98,13 @@ body {
     font-weight: 700;
     color: #e0e0e0;
 }
+
+#status-message {
+    color: #995c5c;
+    font-weight: 700;
+    text-align: center;
+
+    background-color: #f8f9fa;
+    padding: 10px 50px;
+    border-radius: 10px;
+}

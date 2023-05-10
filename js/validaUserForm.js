@@ -92,7 +92,7 @@ async function validaInput(event) {
                 validacoes.senha.validaSenha = true;
                 validacoes.senha.senhaContent = content;
             } else {
-                alert.inputInvalido(inputId, "A senha deve possuir no mínimo 8 caracteres, incluindo letras (abc...), números (123...) e símbolos (%#@…).")
+                alert.inputInvalido(inputId, "A senha deve possuir no mínimo 8 caracteres, incluindo letras (abc.., ABC...), números (123...).")
                 validacoes.senha.validaSenha = false;
             }
             break;

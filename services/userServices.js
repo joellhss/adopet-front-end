@@ -1,4 +1,4 @@
-const hostname = "http://localhost:8080";
+const hostname = "http://adopet-api2-env.eba-wnagn2dz.sa-east-1.elasticbeanstalk.com";
 
 const save = (nome, email, senha, telefone, urlImage) => {
      let post = {
@@ -8,14 +8,14 @@ const save = (nome, email, senha, telefone, urlImage) => {
         },
         body: JSON.stringify({
             name: nome, 
+            phoneNumber: telefone,
             email: email,
             password: senha,
-            phone: telefone,
             url: urlImage
         }) 
     }
     
-    return fetch(hostname + "/users", post)
+    return fetch(hostname + "/users/create", post)
     .then(resposta => {
         console.log(resposta)
         if(resposta.ok) {
