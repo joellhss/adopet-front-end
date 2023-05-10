@@ -12,7 +12,6 @@ async function logarNaConta(event) {
     
     const email = document.getElementById("inputEmail").value;
     const senha = document.getElementById("inputPassword").value;
-    console.log(senha)
 
     try {
         const data = await userServices.login(email, senha)
