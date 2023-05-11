@@ -1,4 +1,4 @@
-const hostname = "//adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com/";
+const hostname = "http://adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com";
 
 const save = (nome, email, senha, telefone, urlImage) => {
      let post = {
@@ -17,7 +17,6 @@ const save = (nome, email, senha, telefone, urlImage) => {
     
     return fetch(hostname + "/users/create", post)
     .then(resposta => {
-        console.log(resposta)
         if(resposta.ok) {
             return resposta.body
         }
@@ -29,7 +28,7 @@ const login = (email, senha) => {
     let post = {
         method: "POST",
         headers: {
-            'Content-type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             email: email,

@@ -1,4 +1,4 @@
-const hostname = "//adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com/";
+const hostname = "http://adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com";
 
 const getAllById = (id) => {
    return fetch(hostname + "/animals/user/" + id)
