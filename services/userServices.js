@@ -1,4 +1,4 @@
-const hostname = "//adopet-app.criarsite.online";
+const hostname = "//adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com/";
 
 const save = (nome, email, senha, telefone, urlImage) => {
      let post = {
