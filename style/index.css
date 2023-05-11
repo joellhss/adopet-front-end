@@ -1,0 +1,105 @@
+.body-adopet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    height: 100%!important;
+}
+
+.apresentation {
+    max-width: 670px;
+}
+
+.apresentation h1 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.apresentation h1 span {
+    color: var(--yellow);
+}
+
+.apresentation p {
+    margin-top: 20px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: center;
+
+    color: #494949;
+}
+
+.box-animals-list {
+    margin-bottom: 40px;
+}
+
+.box-animals-list-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.box-animals{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.box-animals-list-header {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+.box-animals-list-header h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.box-animals-list-header a {
+    text-decoration: none;
+    color: #494949;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.card-animal {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.card-animal:hover {
+
+}
+
+.card-animal img {
+    width: 100%;
+    height: 213px;
+    object-fit: cover;
+}
+
+.card-animal h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 12px;
+}

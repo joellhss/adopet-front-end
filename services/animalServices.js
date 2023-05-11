@@ -6,6 +6,12 @@ const getAllById = (id) => {
     .catch(err => console.error(err))
 }
 
+const getAll = () => {
+   return fetch(hostname + "/animals")
+    .then(response => response.json())
+    .catch(err => console.error(err))
+}
+
 const getSize = () => {
     return fetch(hostname + "/size")
     .then(response => response.json())
@@ -97,7 +103,6 @@ const deleteById = (id) => {
 }
 
 
-
 export const animalServices = {
     getAllById,
     getSize,
@@ -105,5 +110,6 @@ export const animalServices = {
     createAnimal,
     getAnimalById,
     updateAnimal,
-    deleteById
+    deleteById,
+    getAll
 }
