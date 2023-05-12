@@ -1,27 +1,30 @@
 import { animalServices } from "../services/animalServices.js"
 
+const url = new URLSearchParams(window.location.search)
+const id = url.get("id");
+
 (async () => {
     const listaDeAnimais =await animalServices.getAll();
-    const newListaDeAnimais = shuffle(listaDeAnimais)
     const listaDeEspecies =await animalServices.getSpecies();
 
     const boxAnimal = $("#box-animals")
 
     listaDeEspecies.forEach(element => {
-        const boxLista = $(insereListaDeEspecies(element))
-        boxAnimal.append(boxLista.css('opacity', 0).animate({opacity: 1}, 500));
-
-        newListaDeAnimais.forEach((animal, index) => {
-            if(animal.idSpecies == element.id && index < 9) {
-                const animalElement = $(cardAnimal(animal))
-                $(`#specieId-${element.id}`).append(animalElement.css('opacity', 0))
-                animalElement.delay(index * 300).animate({opacity: 1}, 500);
-            }
-        })
+        if(id == element.id) {
+            const boxLista = $(insereListaDeEspecies(element))
+            boxAnimal.append(boxLista.css('opacity', 0).animate({opacity: 1}, 500));
+    
+            listaDeAnimais.forEach((animal, index) => {
+                if(animal.idSpecies == element.id) {
+                    const animalElement = $(cardAnimal(animal))
+                    $(`#specieId-${element.id}`).append(animalElement.css('opacity', 0))
+                    animalElement.delay(index * 300).animate({opacity: 1}, 500);
+                }
+            })
+        }
+        
 
     });
-
-
 })();
 
 function insereListaDeEspecies(objeto) {
@@ -30,7 +33,7 @@ function insereListaDeEspecies(objeto) {
 
     const boxListHeader = document.createElement("div");
     boxListHeader.classList.add("box-animals-list-header");
-    boxListHeader.innerHTML = `<h2>${objeto.name}</h2> <a href="/pages/allAnimals.html?id=${objeto.id}">Ver todos</a>`
+    boxListHeader.innerHTML = `<h2>${objeto.name}s</h2>`
     
     const boxListBody = document.createElement("div");
     boxListBody.classList.add("box-animals-list-body");
@@ -44,7 +47,7 @@ function insereListaDeEspecies(objeto) {
 
 function cardAnimal(animalObject) {
     const card = document.createElement("a");
-    card.href = `/pages/animalPage.html?id=${animalObject.animalId}`
+    card.href = `#`
     card.classList.add("card-animal")
 
     const img = document.createElement("img");

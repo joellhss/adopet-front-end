@@ -50,7 +50,18 @@ const login = (email, senha) => {
           });
 }
 
+const getAll = () => {
+    return fetch(hostname + "/users")
+    .then(resposta => {
+        if(resposta.ok) {
+            return resposta.json();
+        }
+        throw new Error("Não foi possível realizar o cadastro.")
+    })
+}
+
 export const userServices = {
     save,
     login,
+    getAll
 }

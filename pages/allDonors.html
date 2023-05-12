@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/global.css">
-    <link rel="stylesheet" href="style/index.css">
-    <title>Adopet - Home</title>
+    <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <title>Adopet - Todos os animais
+    </title>
 </head>
 <body class="body-adopet">
 
@@ -19,7 +20,7 @@
             <div class="container d-flex justify-content-between">
 
               <a class="navbar-brand" href="./index.html">
-                <img src="img/logo-header.svg" alt="" height="35px">
+                <img src="/img/logo-header.svg" alt="" height="35px">
               </a>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +37,10 @@
                     <a class="nav-link" href="./pages/registration.html">Quero doar</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/pages/about.html">Sobre</a>
+                    <a class="nav-link" href="#">Sobre</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/pages/faq.html">FAQ</a>
+                    <a class="nav-link" href="#">FAQ</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Apoie-nos</a>
@@ -48,6 +49,15 @@
 
 
                 <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item d-flex dropdown align-items-center">
+                        <img src="img/Squared Menu.svg" alt="">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pets</a>
+
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Doadores</a></li>
+                        </ul>
+              
+                    </li>
                     <li class="nav-item ms-3">
                         <a href="./pages/login.html" class="nav-link border rounded btn btn-light px-3">Entrar</a>
                     </li>
@@ -60,23 +70,6 @@
 
     <main class="container h-100 d-flex flex-column align-items-center"> <!-- Desenvolver o corpo da aplicação dentro da tag main -->
 
-      <section class="apresentation">
-
-        <h1 class="text-center mt-5">
-          Todo animal de estimação merece um lar cheio de amor.
-          <br><span>Adote</span> um pet hoje!
-        </h1>
-
-        <p>
-          Navegue pelos nossos animais disponíveis e saiba mais sobre o processo de adoção. Juntos, podemos resgatar, reabilitar e realojar animais de estimação necessitados. Obrigado por apoiar nossa missão de levar alegria às famílias por meio da adoção de animais de estimação.
-        </p>
-
-        <div class="search">
-          
-        </div>
-
-      </section>
-
       <section class="box-animals" id="box-animals">
 
       </section>
@@ -86,7 +79,7 @@
     <footer class="bg-dark m-0 py-5 footer"> <!-- Desenvolver o footer da aplicação dentro da tag footer -->
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
-          <img class="logo-footer" src="img/logo-footer.svg" alt="Logo do adopeter">
+          <img class="logo-footer" src="../img/logo-footer.svg" alt="Logo do adopeter">
   
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -116,8 +109,8 @@
       </div>
     </footer>
 
-    <script src="./js/jquery.min.js"></script>
-    <script src="./controller/indexController.js" type="module"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../controller/allAnimalsController.js" type="module"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>    

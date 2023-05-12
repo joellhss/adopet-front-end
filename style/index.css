@@ -87,7 +87,8 @@ main {
 }
 
 .card-animal:hover {
-
+    scale: 1.05;
+    transition-duration: 300ms;
 }
 
 .card-animal img {
