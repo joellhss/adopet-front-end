@@ -1,6 +1,10 @@
 import { userServices } from "../services/userServices.js";
 import { alert } from "../js/components/alertInputValidation.js"
 
+if(localStorage.getItem("user") != null) {
+    window.location.href = "/pages/userPage.html"
+}
+
 (() => {
     const form = document.querySelector("form")
 

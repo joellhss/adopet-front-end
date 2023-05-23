@@ -20,6 +20,8 @@ async function loadInfoAnimal() {
     document.getElementById("inputImg").value = dados.url_image
     document.getElementById("inputDescricao").value = dados.description
 
+    localStorage.removeItem("idAnimal-edit")
+
     const form = document.querySelector("form");
 
     const formElements = form.elements
@@ -49,6 +51,10 @@ const palavra = url.substring(ultimaBarra + 1);
 
 
 if(palavra == "atualizationAnimal.html") {
+    if(localStorage.getItem("idAnimal-edit") == null) {
+        window.location.href = "/pages/userPage.html"
+    }
+
     loadInfoAnimal()
 }
 

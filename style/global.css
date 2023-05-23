@@ -9,6 +9,10 @@ body {
     width: 100vw!important;
 }
 
+a {
+    text-decoration: none;
+}
+
 .nav-link, .btn-light, .border-secondary, .dropdown-item {
     color: var(--gray);
     border-color: var(--gray);
@@ -44,4 +48,104 @@ footer ul li .nav-link {
 
 footer ul li .nav-link:hover{
     color: var(--yellow);
+}
+
+.profile-creator {
+    text-decoration: none;
+    color: white;
+}
+
+.profile-creator:hover {
+    color: var(--yellow);
+    transition-duration: 500ms;
+}
+
+.title-section {
+    color: var(--yellow);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faq {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+
+
+@media screen and (min-width: 0px) {
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-footer li {
+        margin: 0;
+    }
+
+    .text-footer {
+        padding: 10px 5px;
+    }
+
+    .social-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 32px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .social-list {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        margin-top: 32px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+
+    .text-footer {
+        width: 50%;
+    }
+
 }

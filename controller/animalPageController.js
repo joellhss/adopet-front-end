@@ -6,6 +6,10 @@ const id = url.get("id");
 
 (async () => {
     $('main').css("opacity", 0).delay(500).animate({opacity: 1}, 500);
+
+    if(id == null) {
+        window.location.href = "/index.html"
+    }
     
     const dadosDoAnimal = await animalServices.getAnimalById(id);
 
@@ -62,8 +66,3 @@ function dados(element) {
     $("main").append(newDiv.css('opacity', 0))
     newDiv.delay(300).animate({opacity: 1}, 500);
 }
-
-{/* <div class="user-content">
-<p><span>Nome do usuário:</span> Joel Sousa</p>
-<p><span>Contato:</span> (87) 98853-3943</p>
-</div> */}

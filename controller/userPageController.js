@@ -1,4 +1,4 @@
-import { animalServices } from "../services/animalServices.js";
+import { animalServices } from "/services/animalServices.js";
 import { editAnimal } from "./editAnimalController.js";
 import { deleteAnimal } from "./deleteAnimalController.js";
 
@@ -23,7 +23,7 @@ function hasExpired() {
 hasExpired()
 
 if(hasExpired()) {
-    window.location.href = "../pages/login.html"
+    window.location.href = "/pages/login.html"
 }
 
 (async function() {
@@ -110,5 +110,5 @@ const sair = document.getElementById("sair")
 
 sair.addEventListener("click", e => {
     localStorage.removeItem("user")
-    window.location.href = "../pages/login.html"
+    window.location.href = "/pages/login.html"
 })
