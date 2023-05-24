@@ -36,7 +36,7 @@ main .content {
 }
 
 main .content .table {
-    width: 200px;
+    width: 300px;
 }
 
 main .content .table td:first-child, .description {
