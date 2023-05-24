@@ -1,12 +1,5 @@
 import { animalServices } from "../services/animalServices.js"
 
-// Obtém a data e hora atual
-var timestamp = new Date().getTime();
-
-// Redireciona para a mesma página com um parâmetro de data e hora único
-window.location.href = window.location.href + '?timestamp=' + timestamp;
-
-
 (async () => {
     const listaDeAnimais =await animalServices.getAll();
     const newListaDeAnimais = shuffle(listaDeAnimais)
