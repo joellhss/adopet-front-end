@@ -75,3 +75,7 @@ form h1 {
 .hidden {
     opacity: 0;
 }
+
+.form-animal {
+    width: 100%;
+}
