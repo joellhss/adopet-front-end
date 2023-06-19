@@ -1,4 +1,4 @@
-const hostname = "http://adopet-api-env.eba-pdvv9cap.sa-east-1.elasticbeanstalk.com";
+const hostname = "https://adopet-api-1686699323029.azurewebsites.net";
 
 const getAllById = (id) => {
    return fetch(hostname + "/animals/user/" + id)
