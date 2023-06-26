@@ -1,4 +1,4 @@
-const hostname = "https://adopet-api-1686699323029.azurewebsites.net";
+const hostname = "http://localhost:8082";
 
 const save = (nome, email, senha, telefone, urlImage) => {
      let post = {

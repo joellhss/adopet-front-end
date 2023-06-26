@@ -180,7 +180,7 @@ function atualizarAnimalController(event) {
         const idUser = JSON.parse(localStorage.getItem("user")).id;
         const idAnimal = localStorage.getItem("idAnimal-edit");
         
-        atualizarAnimal(idAnimal, idUser, entityAnimal.nome.content, entityAnimal.idade.content, entityAnimal.castrado.content, entityAnimal.especie.content, entityAnimal.porte.content, entityAnimal.url.content, entityAnimal.descricao, entityAnimal.raca.content)
+        atualizarAnimal(idUser, entityAnimal.nome.content, entityAnimal.idade.content, entityAnimal.castrado.content, entityAnimal.especie.content, entityAnimal.porte.content, entityAnimal.url.content, entityAnimal.descricao, entityAnimal.raca.content)
     }
 
 }

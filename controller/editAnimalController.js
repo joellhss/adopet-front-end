@@ -6,6 +6,8 @@ export function editAnimal(id) {
     window.location.href = "../pages/atualizationAnimal.html"
 }
 
+let animalId =  localStorage.getItem("idAnimal-edit")
+
 async function loadInfoAnimal() {
     const idAnimal = localStorage.getItem("idAnimal-edit")
     const dados = await animalServices.getAnimalById(idAnimal);
@@ -58,9 +60,9 @@ if(palavra == "atualizationAnimal.html") {
     loadInfoAnimal()
 }
 
-export async function atualizarAnimal(idAnimal, idUser, nome, idade, castrado, especie, porte, foto, descricao, raca) {
+export async function atualizarAnimal(idUser, nome, idade, castrado, especie, porte, foto, descricao, raca) {
     try {
-        await animalServices.updateAnimal(idAnimal, idUser, nome, idade, castrado, especie, porte, foto, descricao, raca)
+        await animalServices.updateAnimal(animalId, idUser, nome, idade, castrado, especie, porte, foto, descricao, raca)
         localStorage.removeItem("idAnimal-edit")
         window.location.href = "../pages/registrationAnimalSucess.html"
     } catch(err) {

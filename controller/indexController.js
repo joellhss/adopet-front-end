@@ -11,11 +11,13 @@ import { animalServices } from "../services/animalServices.js"
         const boxLista = $(insereListaDeEspecies(element))
         boxAnimal.append(boxLista.css('opacity', 0).animate({opacity: 1}, 500));
 
+        let count = 0
         newListaDeAnimais.forEach((animal, index) => {
-            if(animal.idSpecies == element.id && index < 9) {
+            if(animal.idSpecies == element.id && count < 4) {
                 const animalElement = $(cardAnimal(animal))
                 $(`#specieId-${element.id}`).append(animalElement.css('opacity', 0))
-                animalElement.delay(index * 300).animate({opacity: 1}, 500);
+                animalElement.delay(index * 300).animate({ opacity: 1 }, 500);
+                count++
             }
         })
 

@@ -22,7 +22,8 @@ function hasExpired() {
 
 hasExpired()
 
-if(hasExpired()) {
+if (hasExpired()) {
+    localStorage.removeItem("user")
     window.location.href = "/pages/login.html"
 }
 
