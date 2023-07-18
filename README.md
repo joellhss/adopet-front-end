@@ -2,8 +2,8 @@
 
 <div align="center">
   <h3>
-    <a href="https://joellhss.github.io/adopet-seminario/">
-        Página do projeto (Em construção) 🧑‍💻️
+    <a href="http://app.adopet.xyz/">
+        Página do projeto (Finalizado) 🧑‍💻️
     </a>
   </h3>
 </div>

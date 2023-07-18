@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;       
 }
 
+main {
+    min-height: 800px;
+}
+
 a {
     text-decoration: none;
 }

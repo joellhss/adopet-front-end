@@ -45,9 +45,10 @@ function insereListaDeEspecies(objeto) {
     return boxList;
 }
 
+
 function cardAnimal(animalObject) {
     const card = document.createElement("a");
-    card.href = `#`
+    card.href = `/pages/animalPage.html?id=${animalObject.animalId}`
     card.classList.add("card-animal")
 
     const img = document.createElement("img");

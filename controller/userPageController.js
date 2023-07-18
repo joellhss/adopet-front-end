@@ -38,7 +38,7 @@ if (hasExpired()) {
     loadingMessage.style.display = 'block';
     
     name.innerText = dadosLocal.nome
-    img.src = dadosLocal.photo
+    img.src = dadosLocal.photo || "https://upload.wikimedia.org/wikipedia/commons/2/2f/No-photo-m.png"
 
     const dadosAnimal = await animalServices.getAllById(dadosLocal.id)
     if(dadosAnimal.length < 1) {
