@@ -3,7 +3,7 @@
 <div align="center">
   <h3>
     <a href="http://app.adopet.xyz/">
-        Página do projeto (Finalizado) 🧑‍💻️
+        Página do projeto (Finalizado) (API OFF) 🧑‍💻️
     </a>
   </h3>
 </div>
